@@ -75,7 +75,7 @@ const authListener = () => {
 
 useEffect(() => {
   authListener()
-}, [input])
+}, [])
 
   return (
     <div className="App">
@@ -86,6 +86,10 @@ useEffect(() => {
           setPassword={setPassword}
           handleLogin={handleLogin}
           handleSignup={handleSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          passwordError={passwordError}
+          emailError={emailError}
         />
     </div>
   );
