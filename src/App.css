@@ -17,7 +17,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: #381a83;
+  background: #3f1b9b;
 }
 
 .login {
@@ -105,21 +105,75 @@ button:hover {
   );
 }
 
-.hero nav {
-  background: #603bbb;
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+
+}
+
+.navigation-link button {
+  margin: 0 5px
+}
+.navigation-link button:hover {
+  background: #e9e9e9;
+  color: #3a2b58;
+  border-radius: 2px;
+  transition: 500ms;
+}
+.navbar nav {
+  background: #3e2480;
   width: 100%;
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.hero nav h2 {
-  color: #fff;
-}
-
-.hero nav button {
+.navbar nav button {
   width: 86px;
   padding: 8px 0;
   background: #3a2b58;
+}
+
+.navbar nav h2 {
+  color: #fff;
+  cursor: pointer;
+}
+.navigation-link li {
+  color: #e9e9e9;
+}
+.service-component {
+  text-align: center;
+  height: 650px;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgba(22, 24, 47, 1) 0%,
+    rgba(38, 20, 72, 0.9) 59%,
+    rgba(17, 27, 75, 0.9) 100%
+  );
+}
+.service-component h1 {
+  padding: 30px;
+  color: #fff;
+}
+.home-component {
+  text-align: center;
+  height: 650px;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgba(22, 24, 47, 1) 0%,
+    rgba(38, 20, 72, 0.9) 59%,
+    rgba(17, 27, 75, 0.9) 100%
+  );
+}
+.home-component h1 {
+  padding: 30px;
+  color: #fff;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-link:hover {
+  color: #3a2b58;
 }

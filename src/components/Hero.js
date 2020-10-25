@@ -1,12 +1,9 @@
 import React from 'react'
 
-export default function Hero({handleLogout}) {
+export default function Hero() {
     return (
-        <section className='hero'>
-            <nav>
-                <h2>Hello User</h2>
-                <button onClick={handleLogout}>Loggout</button>
-            </nav>
-        </section>
+        <div className='hero'>
+            <h1>Register success</h1>
+        </div>
     )
 }
