@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import './App.css';
 import fire from './base'
+import Hero from './components/Hero';
 import Login from './components/Login';
 
 function App() {
@@ -34,7 +35,7 @@ const handleLogin = () => {
             case 'auth/user-not-found':
               setEmailError(e.message);
               break;
-            case 'auth/wrong.password':
+            case 'auth/wrong-password':
               setPasswordError(e.message)
               break;
       }
@@ -51,7 +52,7 @@ const handleSignup = () => {
           case 'auth/invalid-email':
               setEmailError(e.message);
               break;
-            case 'auth/weak.password':
+            case 'auth/weak-password':
               setPasswordError(e.message)
               break;
       }
@@ -75,10 +76,14 @@ const authListener = () => {
 
 useEffect(() => {
   authListener()
+  // eslint-disable-next-line
 }, [])
 
   return (
     <div className="App">
+      {user ? (
+        <Hero handleLogout={handleLogout}/>
+      ) : (
         <Login 
           email={email}
           setEmail={setEmail}
@@ -91,6 +96,7 @@ useEffect(() => {
           passwordError={passwordError}
           emailError={emailError}
         />
+      )} 
     </div>
   );
 }

@@ -16,6 +16,9 @@ button {
   background: #603bbb;
   cursor: pointer;
 }
+button:hover {
+  background: #381a83;
+}
 
 .login {
   width: 100%;
